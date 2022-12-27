@@ -29,6 +29,7 @@ const { contacts: ctrl } = require("../../controllers")
 
 
 //-----------------------------------------------------------------------------
+
 //! 1. Получение списка ВСЕХ КОНТАКТОВ
 router.get("/", ctrlWrapper(ctrl.getAllContacts))
 

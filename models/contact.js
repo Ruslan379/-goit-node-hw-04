@@ -24,6 +24,10 @@ const contactSchema = Schema({
     phone: {
         type: String,
     },
+    userId: {
+        type: String,
+        required: true,
+    },
     favorite: {
         type: Boolean,
         default: false,
