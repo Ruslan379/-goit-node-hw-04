@@ -4,6 +4,7 @@ const Joi = require("joi");
 
 const { handleSchemaValidationErrors } = require("../helpers");
 
+const bcrypt = require("bcrypt")
 
 //-----------------------------------------------------------------------------
 
@@ -31,9 +32,15 @@ const userSchema = Schema({
         required: [true, 'Set password'],
         // unique: true,
     },
-
 }, { versionKey: false, timestamps: true });
 
+//!  await bcrypt.hash(password, 10)
+userSchema.pre("save", async function () {
+    if (this.isNew) {
+
+    }
+    doc.password = await bcrypt.hash(password, 10)
+})
 
 //! Правильный код ошибки contactSchema
 userSchema.post("save", handleSchemaValidationErrors)

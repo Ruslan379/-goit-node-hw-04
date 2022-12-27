@@ -1,11 +1,12 @@
 const { User } = require("../models/userModel.js");
-const bcrypt = require("bcrypt")
+// const bcrypt = require("bcrypt")
 
 //-----------------------------------------------------------------------------
 const registration = async (email, password) => {
     const user = new User({
         email,
-        password: await bcrypt.hash(password, 10)
+        // password: await bcrypt.hash(password, 10)
+        password
     });
     await user.save();
 };
