@@ -26,7 +26,7 @@ const contactSchema = Schema({
     },
     userId: {
         type: String,
-        required: true,
+        // required: true,
     },
     favorite: {
         type: Boolean,
@@ -56,8 +56,8 @@ const contactJoiSchemaPostPut = Joi.object({
         .max(14)
         .required(),
 
-    userId: Joi.string()
-        .required(),
+    userId: Joi.string(),
+    // .required(),
 
     favorite: Joi.bool()
         .optional(),
