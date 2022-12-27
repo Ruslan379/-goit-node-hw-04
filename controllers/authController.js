@@ -12,9 +12,9 @@ const registrationController = async (req, res) => {
 
 const loginController = async (req, res) => {
     const { email, password } = req.body;
-    await login(email, password);
+    const token = await login(email, password);
 
-    res.json({ status: "success" });
+    res.json({ status: "success" }, token);
 };
 
 

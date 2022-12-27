@@ -20,10 +20,12 @@ const login = async (email, password) => {
     if (!await bcrypt.compare(password, user.password)) {
         throw Error(`Wrrong password`)
     }
-    jwt.sign({
+    const token = jwt.sign({
         _id: user.id,
         createdAt: user.createdAt,
-    })
+    }, process.env.JWT_SECRET);
+    console.log("token:", token);
+    return token;
 };
 
 module.exports = {
