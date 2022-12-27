@@ -38,7 +38,7 @@ const removeContact = async (req, res, next) => {
 
     //! ===========================console============================
     console.log(`Этот ПОЛЬЗОВАТЕЛЬ с ID: ${contactId} УДАЛЕН:`.bgRed.yellow); //!
-    console.table([deletedContact]); //!
+    console.log(contact); //!
     lineBreak();
     console.log("END-->DELETE/:id".red); //!
     lineBreak();
