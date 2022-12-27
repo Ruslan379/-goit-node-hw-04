@@ -6,6 +6,8 @@ require("colors");
 
 const contactsRouter = require('./routes/api/contacts')
 
+const { authRouter } = require('./routes/api/authRouter.js') //?
+
 // //? +++++++++++++++++++  mongoose +++++++++++++++++++
 // const mongoose = require("mongoose");
 // // const DB_HOST1 = "mongodb+srv://Ruslan:SiaLzikXKL7dkvK2@cluster379.kq6zkfp.mongodb.net/online_shop?retryWrites=true&w=majority";
@@ -33,6 +35,8 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/api/contacts', contactsRouter)
+
+app.use('/api/auth', authRouter) //?
 
 app.use((req, res) => {
   console.log("!!! ОШИБКА !!!:".bgRed.white)
