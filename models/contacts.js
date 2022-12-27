@@ -98,6 +98,7 @@ async function getContactById(contactId) {
   console.table([contact]); //!
   lineBreak();
   console.log("END-->GET/:id".blue); //!
+  lineBreak();
   //! ==============================================================
 
   return contact;
