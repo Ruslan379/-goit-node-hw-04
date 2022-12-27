@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt")
 const registration = async (email, password) => {
     const user = new User({
         email,
-        password: bcrypt.hash(password, 10)
+        password: await bcrypt.hash(password, 10)
     });
     await user.save();
 };
