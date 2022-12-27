@@ -4,7 +4,7 @@ const Joi = require("joi");
 
 const { handleSchemaValidationErrors } = require("../helpers");
 
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt");
 
 //-----------------------------------------------------------------------------
 
@@ -39,6 +39,7 @@ userSchema.pre("save", async function () {
     if (this.isNew) {
         this.password = await bcrypt.hash(this.password, 10)
     };
+    // TODO: if user cchanged his password
 });
 
 

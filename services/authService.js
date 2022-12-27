@@ -1,5 +1,6 @@
 const { User } = require("../models/userModel.js");
-// const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt")
+const jwt = require('jsonwebtoken');
 
 //-----------------------------------------------------------------------------
 const registration = async (email, password) => {
@@ -11,8 +12,18 @@ const registration = async (email, password) => {
     await user.save();
 };
 
-const login = async (req, res) => {
-
+const login = async (email, password) => {
+    const user = await User.findOne({ email });
+    if (!user) {
+        throw Error(`No user with email: '${email}' found`)
+    }
+    if (!await bcrypt.compare(password, user.password)) {
+        throw Error(`Wrrong password`)
+    }
+    jwt.sign({
+        _id: user.id,
+        createdAt: user.createdAt,
+    })
 };
 
 module.exports = {
