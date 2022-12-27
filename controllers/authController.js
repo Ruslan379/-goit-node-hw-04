@@ -1,6 +1,12 @@
-const registrationController = (req, res) => { };
+const registrationController = (req, res) => {
 
-const loginController = (req, res) => { };
+};
+
+
+
+const loginController = (req, res) => {
+
+};
 
 
 module.exports = {
