@@ -5,6 +5,7 @@ const authMiddleware = (req, res, next) => {
     console.log("tokenType:".bgGreen.black, tokenType); //!
     console.log("token:".bgGreen.black, token); //!
     console.log("");
+
     if (!token) {
         throw Error(`Please, provide a token`)
     }

@@ -11,14 +11,19 @@ const getAllContacts = async (req, res, next) => {
     console.log("getAllContacts-->req.user:".bgYellow.red);
     console.table(req.user);
     console.table([req.user]);
-    const contacts = await Contact.find({});
+
+    const { _id } = req.user //?
+    console.log("_id:".bgYellow.green, _id);
+
+    // const contacts = await Contact.find({});
+    const contacts = await Contact.find({ _id }); //?
 
     //! ===========================console============================
     console.log("START-->GET/All".green); //!
     lineBreak();
     console.log("СПИСОК ВСЕХ ПОЛЬЗОВАТЕЛЕЙ:".bgGreen.black)
     // console.table(contacts);
-    console.log(contacts); //!
+    console.log(contacts); //!!!!!
     lineBreak();
     console.log("END-->GET/All".green); //!
     lineBreak();
