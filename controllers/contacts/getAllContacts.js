@@ -3,7 +3,7 @@ const { Contact } = require("../../models");
 // const { Contact } = require("../../models/contact.js");
 // console.log("Contact:", Contact); //!
 
-const { lineBreak } = require("../../service");
+const { lineBreak } = require("../../services");
 
 
 //-----------------------------------------------------------------------------
