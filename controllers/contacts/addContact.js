@@ -6,6 +6,9 @@ const { Contact } = require("../../models");
 const addContact = async (req, res, next) => {
     const contact = await Contact.create(req.body);
 
+    const { _id: userId } = req.user //?
+    console.log("addContact-->userId:".bgYellow.green, userId);
+
     res.status(201).json({
         status: "success",
         code: 201,

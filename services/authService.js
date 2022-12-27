@@ -23,6 +23,7 @@ const login = async (email, password) => {
     }
     const token = jwt.sign({
         _id: user.id,
+        email: user.email,
         createdAt: user.createdAt,
     }, process.env.JWT_SECRET);
     console.log("token:", token);

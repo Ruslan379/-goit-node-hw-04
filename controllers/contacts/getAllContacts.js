@@ -8,15 +8,16 @@ const { lineBreak } = require("../../services");
 
 //-----------------------------------------------------------------------------
 const getAllContacts = async (req, res, next) => {
-    console.log("getAllContacts-->req.user:".bgYellow.red);
-    console.table(req.user);
+
+    console.log("getAllContacts-->req.user:".bgYellow.red); //?
+    console.table(req.user); //?
     console.table([req.user]);
 
-    const { _id } = req.user //?
-    console.log("_id:".bgYellow.green, _id);
+    const { _id: userId } = req.user //?
+    console.log("getAllContacts-->userId:".bgYellow.green, userId); //?
 
     // const contacts = await Contact.find({});
-    const contacts = await Contact.find({ _id }); //?
+    const contacts = await Contact.find({ userId }); //?
 
     //! ===========================console============================
     console.log("START-->GET/All".green); //!
