@@ -9,21 +9,29 @@ const { handleSchemaValidationErrors } = require("../helpers");
 
 
 const userSchema = Schema({
-    username: {
+    email: {
         type: String,
-        required: [true, 'Set name'],
+        required: [true, 'Set username'],
         unique: true
+    },
+    firstName: {
+        type: String,
+    },
+    lastName: {
+        type: String,
+    },
+    title: {
+        type: String,
+    },
+    bio: {
+        type: String,
     },
     password: {
         type: String,
+        required: [true, 'Set password'],
+        // unique: true,
     },
-    phone: {
-        type: String,
-    },
-    favorite: {
-        type: Boolean,
-        default: false,
-    },
+
 }, { versionKey: false, timestamps: true });
 
 
