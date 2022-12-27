@@ -2,15 +2,47 @@
 const { NotFound } = require('http-errors')
 const { Contact } = require("../../models");
 
+const { lineBreak } = require("../../services");
+
 
 //-----------------------------------------------------------------------------
 const removeContact = async (req, res, next) => {
     const { contactId } = req.params;
-    const contact = await Contact.findByIdAndRemove(contactId);
+    // const contact = await Contact.findByIdAndRemove(contactId);
+
+    //* =============================console===================================
+    console.log("removeContactById-->req.user:".bgYellow.red); //?
+    console.table(req.user); //?
+    console.table([req.user]);
+
+    const { _id: user_id } = req.user //?
+    console.log("removeContactById-->user_id:".bgYellow.blue, user_id); //?
+    console.log("");
+    //* =======================================================================
+
+    //! ===========================console============================
+    console.log("START-->DELETE/:id".red); //!
+    lineBreak();
+    //! ==============================================================
+
+    const contact = await Contact.findOneAndRemove({ _id: contactId, userId: user_id });
 
     if (!contact) {
+        //! ===========================console============================
+        console.log("Нет ПОЛЬЗОВАТЕЛЯ с таким ID:".yellow, contactId.red); //!
+        lineBreak();
+        console.log("END-->DELETE/:id".red); //!
+        //! ==============================================================
         throw new NotFound(`Contact wiht id:'${contactId}' not found`)
     }
+
+    //! ===========================console============================
+    console.log(`Этот ПОЛЬЗОВАТЕЛЬ с ID: ${contactId} УДАЛЕН:`.bgRed.yellow); //!
+    console.table([deletedContact]); //!
+    lineBreak();
+    console.log("END-->DELETE/:id".red); //!
+    lineBreak();
+    //! ==============================================================
 
     res.status(200).json({
         status: "success",

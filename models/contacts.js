@@ -268,7 +268,7 @@ async function removeContact(contactId) {
     //! ===========================console============================
     console.log("Нет ПОЛЬЗОВАТЕЛЯ с таким ID:".yellow, contactId.red); //!
     lineBreak();
-    console.log("END-->GET/:id".blue); //!
+    console.log("END-->DELETE/:id".red); //!
     //! ==============================================================
     return null;
   };
