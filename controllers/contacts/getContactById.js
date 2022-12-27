@@ -10,6 +10,7 @@ const getContactById = async (req, res, next) => {
     // const contact = await Contact.findOne({ _id: contactId }); //! 1-ый вариант
     // const contact = await Contact.findById(contactId); //! 2-ой вариант
 
+
     //* =============================console===================================
     console.log("getContactById-->req.user:".bgYellow.red); //?
     console.table(req.user); //?
@@ -20,12 +21,15 @@ const getContactById = async (req, res, next) => {
     console.log("");
     //* =======================================================================
 
+
     //! ===========================console============================
     console.log("START-->GET/:id".blue); //!
     lineBreak();
     //! ==============================================================
 
+
     const contact = await Contact.findOne({ _id: contactId, userId: user_id }); //! 1-ый вариант
+
 
     if (!contact) {
         //! ===========================console============================
@@ -36,6 +40,7 @@ const getContactById = async (req, res, next) => {
         throw new NotFound(`Contact wiht id:'${contactId}' not found`)
     }
 
+
     //! ===========================console============================
     console.log(`ПОЛЬЗОВАТЕЛЬ с ID: ${contactId}:`.bgBlue.yellow); //!
     // console.table([contact]); //!
@@ -44,6 +49,7 @@ const getContactById = async (req, res, next) => {
     console.log("END-->GET/:id".blue); //!
     lineBreak();
     //! ==============================================================
+
 
     res.status(200).json({
         status: "success",

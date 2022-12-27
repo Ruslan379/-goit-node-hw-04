@@ -10,6 +10,7 @@ const removeContact = async (req, res, next) => {
     const { contactId } = req.params;
     // const contact = await Contact.findByIdAndRemove(contactId);
 
+
     //* =============================console===================================
     console.log("removeContactById-->req.user:".bgYellow.red); //?
     console.table(req.user); //?
@@ -20,12 +21,15 @@ const removeContact = async (req, res, next) => {
     console.log("");
     //* =======================================================================
 
+
     //! ===========================console============================
     console.log("START-->DELETE/:id".red); //!
     lineBreak();
     //! ==============================================================
 
+
     const contact = await Contact.findOneAndRemove({ _id: contactId, userId: user_id });
+
 
     if (!contact) {
         //! ===========================console============================
@@ -36,6 +40,7 @@ const removeContact = async (req, res, next) => {
         throw new NotFound(`Contact wiht id:'${contactId}' not found`)
     }
 
+
     //! ===========================console============================
     console.log(`Этот ПОЛЬЗОВАТЕЛЬ с ID: ${contactId} УДАЛЕН:`.bgRed.yellow); //!
     console.log(contact); //!
@@ -43,6 +48,7 @@ const removeContact = async (req, res, next) => {
     console.log("END-->DELETE/:id".red); //!
     lineBreak();
     //! ==============================================================
+
 
     res.status(200).json({
         status: "success",

@@ -8,6 +8,7 @@ const { lineBreak } = require("../../services");
 const addContact = async (req, res, next) => {
     // const contact = await Contact.create(req.body);
 
+
     //* =============================console===================================
     console.log("addContact-->req.user:".bgYellow.red); //?
     console.table(req.user); //?
@@ -18,7 +19,9 @@ const addContact = async (req, res, next) => {
     console.log("");
     //* =======================================================================
 
+
     const contact = await Contact.create({ ...req.body, userId: user_id }); //?
+
 
     //! ===========================console============================
     console.log("START-->POST".yellow); //!
@@ -30,6 +33,7 @@ const addContact = async (req, res, next) => {
     console.log("END-->POST".yellow); //!
     lineBreak();
     //! ==============================================================
+
 
     res.status(201).json({
         status: "success",

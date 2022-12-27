@@ -8,6 +8,8 @@ const { lineBreak } = require("../../services");
 
 //-----------------------------------------------------------------------------
 const getAllContacts = async (req, res, next) => {
+    // const contacts = await Contact.find({});
+
 
     //* =============================console===================================
     console.log("getAllContacts-->req.user:".bgYellow.red); //?
@@ -20,8 +22,8 @@ const getAllContacts = async (req, res, next) => {
     //* =======================================================================
 
 
-    // const contacts = await Contact.find({});
     const contacts = await Contact.find({ userId: user_id }); //?
+
 
     //! ===========================console============================
     console.log("START-->GET/All".green); //!
@@ -33,6 +35,7 @@ const getAllContacts = async (req, res, next) => {
     console.log("END-->GET/All".green); //!
     lineBreak();
     //! ==============================================================
+
 
     res.status(200).json({
         status: "success",
