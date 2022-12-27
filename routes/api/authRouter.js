@@ -5,6 +5,8 @@ const { ctrlWrapper } = require("../../middlewares")
 
 const { contacts: ctrl } = require("../../controllers")
 
+const { registrationController, loginController } = require("../../controllers/authController.js")
+
 
 //-----------------------------------------------------------------------------
 //! 1. Регистрация
