@@ -9,6 +9,7 @@
     "lint:fix": "eslint --fix **/*.js"
   },
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "colors": "^1.4.0",
     "commander": "^9.4.1",
     "cors": "2.8.5",
