@@ -4,10 +4,12 @@ const { Contact } = require("../../models");
 
 //-----------------------------------------------------------------------------
 const addContact = async (req, res, next) => {
-    const contact = await Contact.create(req.body);
+    // const contact = await Contact.create(req.body);
 
-    const { _id: userId } = req.user //?
-    console.log("addContact-->userId:".bgYellow.green, userId);
+    const { _id: user_id } = req.user //?
+    console.log("addContact-->user_id:".bgYellow.green, user_id); //?
+
+    const contact = await Contact.create({ ...req.body, userId: user_id }); //?
 
     res.status(201).json({
         status: "success",

@@ -56,6 +56,9 @@ const contactJoiSchemaPostPut = Joi.object({
         .max(14)
         .required(),
 
+    userId: Joi.string()
+        .required(),
+
     favorite: Joi.bool()
         .optional(),
 });
