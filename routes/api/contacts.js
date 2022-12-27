@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { validation, ctrlWrapper, isValidId } = require("../../middlewares")
+const { validation, ctrlWrapper, isValidId, authMiddleware } = require("../../middlewares")
 //todo --> OLD
 // const { contactSchema } = require("../../schemas")
 // const validateMiddlewarePostPut = validation(contactSchema.contactSchemaPostPut)
@@ -29,6 +29,8 @@ const { contacts: ctrl } = require("../../controllers")
 
 
 //-----------------------------------------------------------------------------
+//! 0. authMiddleware
+router.use(authMiddleware);
 
 //! 1. Получение списка ВСЕХ КОНТАКТОВ
 router.get("/", ctrlWrapper(ctrl.getAllContacts))
