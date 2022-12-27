@@ -10,7 +10,7 @@ const registrationController = async (req, res) => {
 
 
 
-const loginController = (req, res) => {
+const loginController = async (req, res) => {
 
 };
 
