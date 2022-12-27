@@ -21,6 +21,7 @@ const login = async (email, password) => {
     if (!await bcrypt.compare(password, user.password)) {
         throw Error(`Wrrong password`)
     }
+
     const token = jwt.sign({
         _id: user.id,
         email: user.email,

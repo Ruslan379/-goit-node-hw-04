@@ -41,7 +41,7 @@ app.use('/api/auth', authRouter) //?
 app.use((req, res) => {
   console.log("!!! ОШИБКА !!!:".bgRed.white)
   console.log('Такой маршрут не найден...'.bgYellow.red)
-  res.status(404).json({ message: 'Not found' })
+  res.status(404).json({ message: 'Route not found' })
 })
 
 

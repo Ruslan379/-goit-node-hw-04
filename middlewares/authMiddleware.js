@@ -1,10 +1,12 @@
 const jwt = require('jsonwebtoken');
 
 const authMiddleware = (req, res, next) => {
-    const [tokenType, token] = req.headers["authorization"].split(" ");
+    // if (req.headers.authorization.tokenType) {
+    const [tokenType, token] = req.headers["authorization"].split(" "); //* Bearer
     console.log("tokenType:".bgGreen.black, tokenType); //!
     console.log("token:".bgGreen.black, token); //!
     console.log("");
+    // }
 
     if (!token) {
         throw Error(`Please, provide a token`)
