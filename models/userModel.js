@@ -37,10 +37,10 @@ const userSchema = Schema({
 //!  await bcrypt.hash(password, 10)
 userSchema.pre("save", async function () {
     if (this.isNew) {
+        this.password = await bcrypt.hash(this.password, 10)
+    };
+});
 
-    }
-    doc.password = await bcrypt.hash(password, 10)
-})
 
 //! Правильный код ошибки contactSchema
 userSchema.post("save", handleSchemaValidationErrors)
