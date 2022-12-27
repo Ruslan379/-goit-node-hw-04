@@ -18,7 +18,7 @@ const getAllContacts = async (req, res, next) => {
     lineBreak();
     console.log("СПИСОК ВСЕХ ПОЛЬЗОВАТЕЛЕЙ:".bgGreen.black)
     // console.table(contacts);
-    console.log(contacts);
+    console.log(contacts); //!
     lineBreak();
     console.log("END-->GET/All".green); //!
     lineBreak();
