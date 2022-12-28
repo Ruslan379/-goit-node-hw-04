@@ -10,13 +10,12 @@ const removeContact = async (req, res, next) => {
     const { contactId } = req.params;
     // const contact = await Contact.findByIdAndRemove(contactId);
 
-
+    const { _id: user_id } = req.user //?
     //* =============================console===================================
     console.log("removeContactById-->req.user:".bgYellow.red); //?
     console.table(req.user); //?
     console.table([req.user]);
 
-    const { _id: user_id } = req.user //?
     console.log("removeContactById-->user_id:".bgYellow.blue, user_id); //?
     console.log("");
     //* =======================================================================

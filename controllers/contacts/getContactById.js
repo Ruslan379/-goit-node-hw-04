@@ -10,13 +10,12 @@ const getContactById = async (req, res, next) => {
     // const contact = await Contact.findOne({ _id: contactId }); //! 1-ый вариант
     // const contact = await Contact.findById(contactId); //! 2-ой вариант
 
-
+    const { _id: user_id } = req.user //?
     //* =============================console===================================
     console.log("getContactById-->req.user:".bgYellow.red); //?
     console.table(req.user); //?
     console.table([req.user]);
 
-    const { _id: user_id } = req.user //?
     console.log("getContactById-->user_id:".bgYellow.blue, user_id); //?
     console.log("");
     //* =======================================================================
