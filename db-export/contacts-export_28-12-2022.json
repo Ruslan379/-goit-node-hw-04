@@ -1,0 +1,227 @@
+[{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e1"
+  },
+  "name": "Chaim-111 Lewis-111",
+  "email": "dui.in-111@egetlacus.ua",
+  "phone": "(123) 123-1234",
+  "favorite": true,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672143961240"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e2"
+  },
+  "name": "Kennedy Lane",
+  "email": "mattis.Cras@nonenimMauris.net",
+  "phone": "(542) 451-7038",
+  "favorite": false
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e8"
+  },
+  "name": "Thomas Lucas",
+  "email": "nec@Nulla.com",
+  "phone": "(704) 398-7993",
+  "favorite": false
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e6"
+  },
+  "name": "Reuben Henry",
+  "email": "pharetra.ut@dictum.co.uk",
+  "phone": "(715) 598-5792",
+  "favorite": true
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e0"
+  },
+  "name": "Allen Raymond2",
+  "email": "nulla.ante@vestibul.co.ua1",
+  "phone": "(333) 914-3792",
+  "favorite": false,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669584019180"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e4"
+  },
+  "name": "Cyrus Jackson",
+  "email": "nibh@semsempererat.com",
+  "phone": "(501) 472-5218",
+  "favorite": true
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e7"
+  },
+  "name": "Simon Morton",
+  "email": "dui.Fusce.diam@Donec.com",
+  "phone": "(233) 738-2360",
+  "favorite": true
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e3"
+  },
+  "name": "Wylie Pope",
+  "email": "est@utquamvel.net",
+  "phone": "(692) 802-2949",
+  "favorite": true
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e5"
+  },
+  "name": "Abbot Franks",
+  "email": "scelerisque@magnis.org",
+  "phone": "(186) 568-3720",
+  "favorite": true
+},{
+  "_id": {
+    "$oid": "638123bb623d42469a3127e9"
+  },
+  "name": "Alec Howard",
+  "email": "Donec.elementum@scelerisquescelerisquedui.net",
+  "phone": "(748) 206-2688",
+  "favorite": true
+},{
+  "_id": {
+    "$oid": "6382634a5ba89444dde62cea"
+  },
+  "name": "Alec22 Howard22",
+  "email": "Donec.elementum@scelerisquescelerisquedui.ua",
+  "phone": "(222) 222-2222",
+  "favorite": false
+},{
+  "_id": {
+    "$oid": "63827a4ba4e636991c41fdcb"
+  },
+  "name": "Alec33 Howard33",
+  "email": "Donec.elementum@scelerisquescelerisquedui.ua",
+  "phone": "(333) 333-3333",
+  "favorite": true
+},{
+  "_id": {
+    "$oid": "63827ac8a4e636991c41fdcd"
+  },
+  "name": "Alec44 Howard44",
+  "email": "Donec.elementum@scelerisquescelerisquedui.ua",
+  "phone": "(444) 444-4444",
+  "favorite": false
+},{
+  "_id": {
+    "$oid": "63828302bc6bc2caccbb5693"
+  },
+  "name": "Alec55 Howard55",
+  "email": "Donec.elementum@scelerisquescelerisquedui.ua",
+  "phone": "(555) 555-5555",
+  "favorite": false
+},{
+  "_id": {
+    "$oid": "638284d41cafb41f23d583ee"
+  },
+  "name": "Alec77 Howard77",
+  "email": "Donec.elementum@scelerisquescelerisquedui.org",
+  "phone": "(777) 777-777",
+  "favorite": false
+},{
+  "_id": {
+    "$oid": "63828d2c4ffa569b457d036c"
+  },
+  "name": "Alec88 Howard88",
+  "email": "Donec.elementum@scelerisquescelerisquedui.com",
+  "phone": "(888) 888-888",
+  "favorite": false
+},{
+  "_id": {
+    "$oid": "638297af522fb5274b5f748d"
+  },
+  "name": "Alec2023 Howard1919",
+  "email": "Donec.elementum@scelerisquescelerisquedui.ua",
+  "phone": "(191) 191-1919",
+  "favorite": true,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669507835410"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63829bc4aace880401f7b98c"
+  },
+  "name": "AlecBBB-7 HowarBBB-7",
+  "email": "Donec777.elementum@scelerisquesceler.com",
+  "phone": "(777) 777-7777",
+  "favorite": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669503940511"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672144141008"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63ab53bdfdba8f8af2a8be07"
+  },
+  "name": "AlecEEE-0 HowarEEE-0",
+  "email": "Donec000.elementum@scelerisquesceler.ua",
+  "phone": "(111) 111-1111",
+  "userId": "63ab4d391b2c142c8f6935b2",
+  "favorite": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672172477806"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672235569800"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63ab5a8a044c2b48c2208279"
+  },
+  "name": "AlecEEE-9 HowarEEE-9",
+  "email": "Donec999.elementum@scelerisquesceler.com",
+  "phone": "(999) 999-9999",
+  "userId": "63ab4d391b2c142c8f6935b2",
+  "favorite": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672174218722"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672174218722"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63ab6ffd8c72d1b8c7f6aa86"
+  },
+  "name": "AlecYYY-12 HowarYYY-12",
+  "email": "Donec222.elementum@scelerisquesceler.com",
+  "phone": "(144) 144-1414",
+  "userId": "63ab4d391b2c142c8f6935b2",
+  "favorite": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672179709370"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672221071260"
+    }
+  }
+}]
