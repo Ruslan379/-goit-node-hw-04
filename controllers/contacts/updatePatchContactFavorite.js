@@ -2,6 +2,8 @@
 const { NotFound, BadRequest } = require('http-errors');
 const { Contact } = require("../../models");
 
+const { lineBreak } = require("../../services");
+
 
 //-----------------------------------------------------------------------------
 const updatePatchContactFavorite = async (req, res, next) => {
