@@ -18,11 +18,11 @@ const updatePatchContact = async (req, res, next) => {
 
     const { _id: user_id } = req.user //?
     //* =============================console===================================
-    console.log("updatePutContact-->req.user:".bgYellow.red); //?
+    console.log("updatePatchContact-->req.user:".bgYellow.red); //?
     console.table(req.user); //?
     console.table([req.user]);
 
-    console.log("updatePutContact-->user_id:".bgYellow.blue, user_id); //?
+    console.log("updatePatchContact-->user_id:".bgYellow.blue, user_id); //?
     console.log("");
     //* =======================================================================
 
