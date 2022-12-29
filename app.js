@@ -25,6 +25,20 @@ const { authRouter } = require('./routes/api/authRouter.js') //?
 //   });
 // //? _____________________  mongoose _____________________
 
+//---------------------------routes-------------------------------
+//! auth
+// POST --> http://localhost:3000/api/auth/registration
+// POST --> http://localhost:3000/api/auth/login
+// Headers --> Authorization -->
+// Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2FiNGQzOTFiMmMxNDJjOGY2OTM1YjIiLCJlbWFpbCI6IjU1NUB1a3IubmV0IiwiY3JlYXRlZEF0IjoiMjAyMi0xMi0yN1QxOTo1MzoyOS42MjJaIiwiaWF0IjoxNjcyMTc1MjU2fQ.x-nm43Td-Xg6ccmgC5XQK8Zx8nMMyu-CCz3uLJlbfCU
+
+
+//* contacts
+// http://localhost:3000/api/contacts
+// http://localhost:3000/api/contacts/id
+// http://localhost:3000/api/contacts/id/favorite
+// http://localhost:3000/api/contacts?skip=0&limit=2
+
 //----------------------------------------------------------------
 const app = express()
 
