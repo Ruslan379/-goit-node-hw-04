@@ -59,11 +59,19 @@ const getAllContacts = async (req, res, next) => {
     //! ===========================console============================
     console.log("START-->GET/All".green); //!
     lineBreak();
-    console.log("СПИСОК ВСЕХ КОНТАКТОВ USER:".bgGreen.black, user_id)
+    console.log("СПИСОК ВСЕХ КОНТАКТОВ USER с _id:".bgGreen.black, user_id)
     // console.table(contacts);
     console.log(contacts); //!!!!!
-    console.log("СПИСОК ВСЕХ USER и их КОНТАКТОВ:".)
-    console.log(users); //!!!!!
+
+    console.log("СПИСОК ВСЕХ USERS и их КОНТАКТОВ:".bgCyan.black)
+    for (let i = 0; i < users.length; i++) {
+        console.log(users[i]); //!!!!!
+        // if (users[i].userContacts.length) {
+        //     console.log("СПИСОК ВСЕХ КОНТАКТОВ:".bgMagenta.black)
+        //     console.log(users[i].userContacts); //!!!!!
+        // }
+    }
+
     lineBreak();
     console.log("END-->GET/All".green); //!
     lineBreak();
