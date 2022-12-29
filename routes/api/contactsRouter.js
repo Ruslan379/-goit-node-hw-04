@@ -17,7 +17,7 @@ const {
     contactJoiSchemaPostPut,
     contactJoiSchemaPatch,
     contactJoiSchemaPatchFavorite
-} = require("../../models/contact.js");
+} = require("../../models/contactModel.js");
 const validateMiddlewarePostPut = validation(contactJoiSchemaPostPut);
 const validateMiddlewarePatch = validation(contactJoiSchemaPatch);
 const validateMiddlewarePatchFavorite = validation(contactJoiSchemaPatchFavorite);

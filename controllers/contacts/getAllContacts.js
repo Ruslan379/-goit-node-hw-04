@@ -65,8 +65,13 @@ const getAllContacts = async (req, res, next) => {
     console.log(contacts); //!!!!!
 
     //? Aggregation
-    console.log("СПИСОК ВСЕХ USERS и их КОНТАКТОВ:".bgCyan.black)
+    console.log("------------------------- СПИСОК ВСЕХ USERS и их КОНТАКТОВ: --------------------------".bgCyan.black);
+    console.log("");
     for (let i = 0; i < users.length; i++) {
+        const id = String(users[i]._id)
+        // console.log("id:", id); //!
+        console.log("");
+        console.log("СПИСОК ВСЕХ КОНТАКТОВ USER с _id:".bgGreen.black, id.bgRed.black)
         console.log(users[i]); //!!!!!
         // if (users[i].userContacts.length) {
         //     console.log("СПИСОК ВСЕХ КОНТАКТОВ:".bgMagenta.black)

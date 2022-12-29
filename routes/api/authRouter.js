@@ -18,4 +18,5 @@ router.post('/login', ctrlWrapper(loginController))
 
 
 
-module.exports = { authRouter: router }
+// module.exports = { authRouter: router }
+module.exports = router

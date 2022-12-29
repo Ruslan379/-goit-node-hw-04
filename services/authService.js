@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken');
 // require("dotenv").config()
 
+const { lineBreak } = require("../services")
+
 //-----------------------------------------------------------------------------
 const registration = async (email, password) => {
     const user = new User({
@@ -27,7 +29,9 @@ const login = async (email, password) => {
         email: user.email,
         createdAt: user.createdAt,
     }, process.env.JWT_SECRET);
-    console.log("token:", token);
+    lineBreak();
+    console.log("token:".red, token.green); //!
+    lineBreak();
     return token;
 };
 

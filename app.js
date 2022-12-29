@@ -4,9 +4,10 @@ const cors = require('cors')
 require("dotenv").config()
 require("colors");
 
-const contactsRouter = require('./routes/api/contacts')
+const contactsRouter = require('./routes/api/contactsRouter.js')
 
-const { authRouter } = require('./routes/api/authRouter.js') //?
+// const { authRouter } = require('./routes/api/authRouter.js') //?
+const authRouter = require('./routes/api/authRouter.js') //?
 
 // //? +++++++++++++++++++  mongoose +++++++++++++++++++
 // const mongoose = require("mongoose");
@@ -34,14 +35,14 @@ const { authRouter } = require('./routes/api/authRouter.js') //?
 
 
 //* contacts
-// http://localhost:3000/api/contacts
-// http://localhost:3000/api/contacts/id
-// http://localhost:3000/api/contacts/id/favorite
-// http://localhost:3000/api/contacts?skip=0&limit=4
+//  http://localhost:3000/api/contacts
+//  http://localhost:3000/api/contacts/id
+//  http://localhost:3000/api/contacts/id/favorite
+//* http://localhost:3000/api/contacts?skip=0&limit=4
 
-// http://localhost:3000/api/contacts?skip=0&limit=2&favorite=true
-// http://localhost:3000/api/contacts?skip=0&limit=2&sortField=favorite
-// http://localhost:3000/api/contacts?skip=0&limit=2&sortField=favorite&sortOrder=DESC
+//  http://localhost:3000/api/contacts?skip=0&limit=2&favorite=true
+//  http://localhost:3000/api/contacts?skip=0&limit=2&sortField=favorite
+//  http://localhost:3000/api/contacts?skip=0&limit=2&sortField=favorite&sortOrder=DESC
 
 
 //----------------------------------------------------------------
