@@ -17,11 +17,11 @@ const getAllContacts = async (req, res, next) => {
     console.table(req.user); //?
     console.table([req.user]);
 
-    console.log("getAllContacts-->user_id:".bgYellow.blue, user_id); //?
+    console.log("getAllContacts-->user_id:".bgYellow.blue, user_id.bgGreen.blue); //?
     console.log("");
     //* =======================================================================
 
-    //? =============================Пагинация=================================
+    //? ============================ Пагинация ================================
     let {
         skip = 1,
         limit = 2
@@ -32,7 +32,18 @@ const getAllContacts = async (req, res, next) => {
     // limit = limit > 2 ? 2 : limit //! будет показано только: 2 контакта (поста)
     //? =======================================================================
 
-    //? ===========================Aggregation=================================
+
+    // const contacts = await Contact.find({ userId: user_id }); //*
+    //? Пагинация
+    const contacts = await Contact.find({ userId: user_id, skip, limit })
+        .select({ createdAt: 0 })   //! не показывать поле "createdAt"
+        .skip(skip)   //! с какого элемента массива (объекта) начать показ
+        .limit(limit)   //! сколько элементов массива (объекта) показать
+        .sort("name") //! сортировка по полю "name"
+    // .sort({ "favorite": true }) //! сортировка по полю "name"
+
+
+    //? ========================== Aggregation ================================
     const users = await User.aggregate([
         {
             '$lookup': {
@@ -46,23 +57,14 @@ const getAllContacts = async (req, res, next) => {
     //? =======================================================================
 
 
-    // const contacts = await Contact.find({ userId: user_id }); //*
-    //?
-    const contacts = await Contact.find({ userId: user_id, skip, limit })
-        .select({ createdAt: 0 })   //! не показывать поле "createdAt"
-        .skip(skip)   //! с какого элемента массива (объекта) начать показ
-        .limit(limit)   //! сколько элементов массива (объекта) показать
-        .sort("name") //! сортировка по полю "name"
-    // .sort({ "favorite": true }) //! сортировка по полю "name"
-
 
     //! ===========================console============================
     console.log("START-->GET/All".green); //!
     lineBreak();
-    console.log("СПИСОК ВСЕХ КОНТАКТОВ USER с _id:".bgGreen.black, user_id)
-    // console.table(contacts);
+    console.log("СОРТИРОВАННЫЙ СПИСОК ВСЕХ КОНТАКТОВ USER с _id:".bgGreen.black, user_id.bgGreen.blue)
     console.log(contacts); //!!!!!
 
+    //? Aggregation
     console.log("СПИСОК ВСЕХ USERS и их КОНТАКТОВ:".bgCyan.black)
     for (let i = 0; i < users.length; i++) {
         console.log(users[i]); //!!!!!
