@@ -20,6 +20,14 @@ const getAllContacts = async (req, res, next) => {
     console.log("");
     //* =======================================================================
 
+    //? =======================================================================
+    const {
+        skip = 0,
+        limit = 5
+    } = req.query
+
+    //? =======================================================================
+
 
     const contacts = await Contact.find({ userId: user_id }); //?
 
@@ -39,7 +47,9 @@ const getAllContacts = async (req, res, next) => {
     res.status(200).json({
         status: "success",
         code: 200,
-        data: { contacts }
+        data: { contacts },
+        skip,
+        limit
     });
 };
 
