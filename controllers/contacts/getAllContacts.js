@@ -22,14 +22,18 @@ const getAllContacts = async (req, res, next) => {
 
     //? =======================================================================
     const {
-        skip = 0,
-        limit = 5
+        skip = 1,
+        limit = 2
     } = req.query
 
     //? =======================================================================
 
 
-    const contacts = await Contact.find({ userId: user_id }); //?
+    // const contacts = await Contact.find({ userId: user_id }); //*
+    const contacts = await Contact.find({ userId: user_id, skip, limit })
+        .select({ createdAt: 0 })
+        .skip(skip)
+        .limit(limit); //?
 
 
     //! ===========================console============================
