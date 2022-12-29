@@ -84,7 +84,9 @@ const getAllContacts = async (req, res, next) => {
         status: "success",
         code: 200,
         data: { contacts },
+        //? Aggregation
         data: { users },
+        //? Пагинация
         skip,
         limit
     });
