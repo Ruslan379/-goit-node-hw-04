@@ -1,5 +1,6 @@
 //? +++++++++++++++++++  mongoose +++++++++++++++++++
 const { Contact } = require("../../models");
+const { User } = require("../../models");
 // const { Contact } = require("../../models/contact.js");
 // console.log("Contact:", Contact); //!
 
@@ -32,10 +33,16 @@ const getAllContacts = async (req, res, next) => {
     //? =======================================================================
 
     //? ===========================Aggregation=================================
-
-
-
-
+    const users = await User.aggregate([
+        {
+            '$lookup': {
+                'from': 'contacts',
+                'localField': '_id',
+                'foreignField': 'userId',
+                'as': 'userContacts'
+            }
+        }
+    ])
     //? =======================================================================
 
 
@@ -52,9 +59,11 @@ const getAllContacts = async (req, res, next) => {
     //! ===========================console============================
     console.log("START-->GET/All".green); //!
     lineBreak();
-    console.log("СПИСОК ВСЕХ ПОЛЬЗОВАТЕЛЕЙ:".bgGreen.black)
+    console.log("СПИСОК ВСЕХ КОНТАКТОВ USER:".bgGreen.black, user_id)
     // console.table(contacts);
     console.log(contacts); //!!!!!
+    console.log("СПИСОК ВСЕХ USER и их КОНТАКТОВ:".)
+    console.log(users); //!!!!!
     lineBreak();
     console.log("END-->GET/All".green); //!
     lineBreak();
@@ -65,6 +74,7 @@ const getAllContacts = async (req, res, next) => {
         status: "success",
         code: 200,
         data: { contacts },
+        data: { users },
         skip,
         limit
     });
