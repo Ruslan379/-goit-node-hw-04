@@ -30,7 +30,7 @@ const { authRouter } = require('./routes/api/authRouter.js') //?
 // POST --> http://localhost:3000/api/auth/registration
 // POST --> http://localhost:3000/api/auth/login
 // Headers --> Authorization -->
-// Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2FiNGQzOTFiMmMxNDJjOGY2OTM1YjIiLCJlbWFpbCI6IjU1NUB1a3IubmV0IiwiY3JlYXRlZEF0IjoiMjAyMi0xMi0yN1QxOTo1MzoyOS42MjJaIiwiaWF0IjoxNjcyMTc1MjU2fQ.x-nm43Td-Xg6ccmgC5XQK8Zx8nMMyu-CCz3uLJlbfCU
+// Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2FiNGQzOTFiMmMxNDJjOGY2OTM1YjIiLCJlbWFpbCI6IjU1NUB1a3IubmV0IiwiY3JlYXRlZEF0IjoiMjAyMi0xMi0yN1QxOTo1MzoyOS42MjJaIiwiaWF0IjoxNjcyMzExNDI1fQ.6jn1gNrqcmaFYOXID1g7kWsGPeA4Pucr8sLyjHCX_Z8
 
 
 //* contacts

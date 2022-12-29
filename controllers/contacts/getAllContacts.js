@@ -26,7 +26,9 @@ const getAllContacts = async (req, res, next) => {
         limit = 2
     } = req.query;
 
-    // limit = limit > 1 ? 1 : limit //! будет показано только: 1 контакт (пост)
+    // skip = parseInt(skip); //! работает и без этого
+    // limit = parseInt(limit); //! работает и без этого
+    // limit = limit > 2 ? 2 : limit //! будет показано только: 2 контакта (поста)
 
     //? =======================================================================
 
