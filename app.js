@@ -37,7 +37,7 @@ const { authRouter } = require('./routes/api/authRouter.js') //?
 // http://localhost:3000/api/contacts
 // http://localhost:3000/api/contacts/id
 // http://localhost:3000/api/contacts/id/favorite
-// http://localhost:3000/api/contacts?skip=0&limit=2
+// http://localhost:3000/api/contacts?skip=0&limit=4
 
 // http://localhost:3000/api/contacts?skip=0&limit=2&favorite=true
 // http://localhost:3000/api/contacts?skip=0&limit=2&sortField=favorite
