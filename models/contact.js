@@ -29,6 +29,7 @@ const contactSchema = Schema({
         // type: String,
         // type: mongoose.Schema.Types.ObjectId,
         type: Schema.Types.ObjectId,
+        ref: "user",
         // required: true,
     },
     favorite: {
