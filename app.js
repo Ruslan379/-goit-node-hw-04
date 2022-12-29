@@ -5,7 +5,6 @@ require("dotenv").config()
 require("colors");
 
 const contactsRouter = require('./routes/api/contactsRouter.js')
-
 // const { authRouter } = require('./routes/api/authRouter.js') //?
 const authRouter = require('./routes/api/authRouter.js') //?
 
@@ -28,10 +27,15 @@ const authRouter = require('./routes/api/authRouter.js') //?
 
 //---------------------------routes-------------------------------
 //! auth
-// POST --> http://localhost:3000/api/auth/registration
-// POST --> http://localhost:3000/api/auth/login
-// Headers --> Authorization -->
-// Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2FiNGQzOTFiMmMxNDJjOGY2OTM1YjIiLCJlbWFpbCI6IjU1NUB1a3IubmV0IiwiY3JlYXRlZEF0IjoiMjAyMi0xMi0yN1QxOTo1MzoyOS42MjJaIiwiaWF0IjoxNjcyMzM4ODk2fQ.OF7nTx66ljHbC90VfIGsXGxwLK3ulHIrF104g55g7bA
+
+//! POST --> http://localhost:3000/api/users/signup
+//! POST --> http://localhost:3000/api/users/login
+
+//  POST --> http://localhost:3000/api/auth/registration
+//  POST --> http://localhost:3000/api/auth/login
+
+//  Headers --> Authorization -->
+//  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2FiNGQzOTFiMmMxNDJjOGY2OTM1YjIiLCJlbWFpbCI6IjU1NUB1a3IubmV0IiwiY3JlYXRlZEF0IjoiMjAyMi0xMi0yN1QxOTo1MzoyOS42MjJaIiwiaWF0IjoxNjcyMzM4ODk2fQ.OF7nTx66ljHbC90VfIGsXGxwLK3ulHIrF104g55g7bA
 
 
 //* contacts
@@ -54,9 +58,11 @@ app.use(logger(formatsLogger))
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/contacts', contactsRouter)
 
+app.use('/api/contacts', contactsRouter)
 app.use('/api/auth', authRouter) //?
+// app.use('/api/users', authRouter) //? ДЗ-4
+
 
 app.use((req, res) => {
   console.log("!!! ОШИБКА !!!:".bgRed.white)

@@ -18,13 +18,12 @@ const {
     contactJoiSchemaPatch,
     contactJoiSchemaPatchFavorite
 } = require("../../models/contactModel.js");
+
 const validateMiddlewarePostPut = validation(contactJoiSchemaPostPut);
 const validateMiddlewarePatch = validation(contactJoiSchemaPatch);
 const validateMiddlewarePatchFavorite = validation(contactJoiSchemaPatchFavorite);
 
 const { contacts: ctrl } = require("../../controllers")
-
-
 
 
 
