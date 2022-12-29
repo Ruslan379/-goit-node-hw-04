@@ -1,4 +1,5 @@
 //? +++++++++++++++++++  mongoose +++++++++++++++++++
+const mongoose = require("mongoose");
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
@@ -25,7 +26,8 @@ const contactSchema = Schema({
         type: String,
     },
     userId: {
-        type: String,
+        // type: String,
+        type: mongoose.Schema.Types.ObjectId,
         // required: true,
     },
     favorite: {
