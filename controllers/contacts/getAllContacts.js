@@ -34,11 +34,12 @@ const getAllContacts = async (req, res, next) => {
 
 
     // const contacts = await Contact.find({ userId: user_id }); //*
+    //?
     const contacts = await Contact.find({ userId: user_id, skip, limit })
-        .select({ createdAt: 0 })
-        .skip(skip)
-        .limit(limit); //?
-
+        .select({ createdAt: 0 })   //! не показывать поле "createdAt"
+        .skip(skip)   //! с какого элемента массива (объекта) начать показ
+        .limit(limit)   //! сколько элементов массива (объекта) показать
+        .sort("name") //! сортировка по полю "name"
 
     //! ===========================console============================
     console.log("START-->GET/All".green); //!
